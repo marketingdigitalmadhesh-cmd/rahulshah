@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import rahulPhoto from "@/assets/rahul.jpg";
+import rahulAsset from "@/assets/rahul.png.asset.json";
+const rahulPhoto = rahulAsset.url;
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
