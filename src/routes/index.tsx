@@ -78,11 +78,12 @@ const process = [
 ];
 
 const cases = [
-  { industry: "Real Estate", headline: "450+ Qualified Leads in 30 Days", metric: "450+", label: "Qualified Leads" },
+  { industry: "Service Business", headline: "450+ Qualified Leads in 30 Days", metric: "450+", label: "Qualified Leads" },
   { industry: "E-Commerce Brand", headline: "Increased Online Sales by 220% in 90 Days", metric: "+220%", label: "Sales Growth" },
   { industry: "Education", headline: "Generated 1,000+ Student Inquiries", metric: "1,000+", label: "Inquiries" },
   { industry: "Local Business", headline: "Achieved 4X Return on Ad Spend", metric: "4×", label: "ROAS" },
-  { industry: "Service Business", headline: "Reduced Cost Per Lead by 42%", metric: "-42%", label: "Cost Per Lead" },
+  { industry: "D2C Brand", headline: "Reduced Cost Per Lead by 42%", metric: "-42%", label: "Cost Per Lead" },
+  { industry: "Personal Brand", headline: "Scaled to 6-Figure Monthly Revenue", metric: "6-Figure", label: "Monthly Revenue" },
 ];
 
 const whyChoose = [
@@ -108,20 +109,20 @@ const testimonials = [
   {
     quote:
       "Rahul rebuilt our entire ad account from scratch. Within 60 days we saw a 3.4× ROAS and finally understood where every dollar was going. The reporting is unmatched.",
-    name: "Priya Sharma",
-    role: "Founder, D2C Beauty Brand",
+    name: "Dipak Shah",
+    role: "Founder, D2C Brand",
   },
   {
     quote:
       "Communication is fast, strategy is clear, and the results speak for themselves. He treats our budget like it's his own — that's rare.",
-    name: "Arjun Mehta",
+    name: "Ambika",
     role: "CEO, EdTech Startup",
   },
   {
     quote:
       "We had tried two agencies before. Rahul delivered more leads in 3 weeks than they did in 6 months. The man knows Meta inside out.",
-    name: "Sabina Thapa",
-    role: "Marketing Head, Real Estate",
+    name: "Manisha",
+    role: "Marketing Head, Service Business",
   },
 ];
 
