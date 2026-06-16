@@ -34,6 +34,9 @@ import {
   Sparkles,
 } from "lucide-react";
 
+const WHATSAPP_URL = "https://wa.me/9779804885935?text=Hi%20Rahul%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.";
+const EMAIL = "official.rahulshah@gmail.com";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -78,11 +81,12 @@ const process = [
 ];
 
 const cases = [
-  { industry: "Real Estate", headline: "450+ Qualified Leads in 30 Days", metric: "450+", label: "Qualified Leads" },
+  { industry: "Service Business", headline: "450+ Qualified Leads in 30 Days", metric: "450+", label: "Qualified Leads" },
   { industry: "E-Commerce Brand", headline: "Increased Online Sales by 220% in 90 Days", metric: "+220%", label: "Sales Growth" },
   { industry: "Education", headline: "Generated 1,000+ Student Inquiries", metric: "1,000+", label: "Inquiries" },
   { industry: "Local Business", headline: "Achieved 4X Return on Ad Spend", metric: "4×", label: "ROAS" },
-  { industry: "Service Business", headline: "Reduced Cost Per Lead by 42%", metric: "-42%", label: "Cost Per Lead" },
+  { industry: "D2C Brand", headline: "Reduced Cost Per Lead by 42%", metric: "-42%", label: "Cost Per Lead" },
+  { industry: "Personal Brand", headline: "Scaled to 6-Figure Monthly Revenue", metric: "6-Figure", label: "Monthly Revenue" },
 ];
 
 const whyChoose = [
@@ -108,20 +112,20 @@ const testimonials = [
   {
     quote:
       "Rahul rebuilt our entire ad account from scratch. Within 60 days we saw a 3.4× ROAS and finally understood where every dollar was going. The reporting is unmatched.",
-    name: "Priya Sharma",
-    role: "Founder, D2C Beauty Brand",
+    name: "Dipak Shah",
+    role: "Founder, D2C Brand",
   },
   {
     quote:
       "Communication is fast, strategy is clear, and the results speak for themselves. He treats our budget like it's his own — that's rare.",
-    name: "Arjun Mehta",
+    name: "Ambika",
     role: "CEO, EdTech Startup",
   },
   {
     quote:
       "We had tried two agencies before. Rahul delivered more leads in 3 weeks than they did in 6 months. The man knows Meta inside out.",
-    name: "Sabina Thapa",
-    role: "Marketing Head, Real Estate",
+    name: "Manisha",
+    role: "Marketing Head, Service Business",
   },
 ];
 
@@ -148,7 +152,9 @@ function Nav() {
           <a href="#faq" className="hover:text-ink transition-colors">FAQ</a>
         </nav>
         <a
-          href="#contact"
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.02]"
         >
           Book a Call <ArrowRight className="h-3.5 w-3.5" />
@@ -175,7 +181,9 @@ function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="#contact"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-background shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.02]"
             >
               Book a Free Consultation
@@ -503,9 +511,16 @@ function Testimonials() {
               <blockquote className="mt-5 text-base leading-relaxed text-ink">
                 "{t.quote}"
               </blockquote>
-              <figcaption className="mt-6 border-t border-border pt-4">
-                <div className="font-semibold text-ink">{t.name}</div>
-                <div className="text-sm text-ink-soft">{t.role}</div>
+              <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-4">
+                <img
+                  src={rahulPhoto}
+                  alt={t.name}
+                  className="h-10 w-10 rounded-full object-cover grayscale"
+                />
+                <div>
+                  <div className="font-semibold text-ink">{t.name}</div>
+                  <div className="text-sm text-ink-soft">{t.role}</div>
+                </div>
               </figcaption>
             </figure>
           ))}
@@ -604,8 +619,8 @@ function Contact() {
           </p>
 
           <div className="mt-8 space-y-3">
-            <ContactLink href="https://wa.me/977" icon={MessageCircle} label="WhatsApp" value="Chat instantly" />
-            <ContactLink href="mailto:hello@rahulkshah.com" icon={Mail} label="Email" value="hello@rahulkshah.com" />
+            <ContactLink href={WHATSAPP_URL} icon={MessageCircle} label="WhatsApp" value="+977 9804885935" />
+            <ContactLink href={`mailto:${EMAIL}`} icon={Mail} label="Email" value={EMAIL} />
             <div className="flex items-center gap-3 pt-4">
               <Social href="#" icon={Facebook} />
               <Social href="#" icon={Linkedin} />
@@ -663,7 +678,9 @@ function FinalCTA() {
               returns from your advertising investment.
             </p>
             <a
-              href="#contact"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-10 inline-flex items-center gap-2 rounded-full bg-background px-7 py-4 text-sm font-semibold text-ink transition-transform hover:scale-[1.02]"
             >
               Book a Free Consultation
@@ -705,8 +722,8 @@ function Footer() {
         <div>
           <div className="text-xs font-semibold uppercase tracking-widest text-ink">Connect</div>
           <ul className="mt-4 space-y-2 text-sm text-ink-soft">
-            <li><a href="mailto:hello@rahulkshah.com" className="hover:text-ink">hello@rahulkshah.com</a></li>
-            <li><a href="https://wa.me/977" className="hover:text-ink">WhatsApp</a></li>
+            <li><a href={`mailto:${EMAIL}`} className="hover:text-ink">{EMAIL}</a></li>
+            <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-ink">WhatsApp · +977 9804885935</a></li>
             <li><a href="#" className="hover:text-ink">LinkedIn</a></li>
             <li><a href="#" className="hover:text-ink">Instagram</a></li>
           </ul>
