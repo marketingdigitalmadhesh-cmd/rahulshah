@@ -43,42 +43,46 @@
 :root {
   --radius: 0.75rem;
 
+  /* Meta brand palette — Facebook Blue #1877F2 anchor */
   --background: oklch(1 0 0);
-  --foreground: oklch(0.18 0.02 260);
+  --foreground: oklch(0.2 0.04 260);
 
-  --ink: oklch(0.16 0.02 260);
-  --ink-soft: oklch(0.42 0.02 260);
+  --ink: oklch(0.18 0.04 260);
+  --ink-soft: oklch(0.45 0.03 260);
 
-  --surface: oklch(0.985 0.004 260);
-  --surface-elevated: oklch(0.975 0.006 260);
+  --surface: oklch(0.985 0.01 250);
+  --surface-elevated: oklch(0.97 0.018 250);
 
-  --brand: oklch(0.18 0.02 260);
+  /* Meta blue */
+  --brand: oklch(0.6 0.2 256);
   --brand-foreground: oklch(0.99 0 0);
-  --brand-soft: oklch(0.96 0.01 260);
+  --brand-soft: oklch(0.95 0.04 256);
 
-  --primary: oklch(0.18 0.02 260);
+  --primary: oklch(0.6 0.2 256);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.97 0.006 260);
-  --secondary-foreground: oklch(0.2 0.02 260);
-  --muted: oklch(0.97 0.006 260);
-  --muted-foreground: oklch(0.5 0.02 260);
-  --accent: oklch(0.7 0.18 145);
-  --accent-foreground: oklch(0.15 0.02 260);
+  --secondary: oklch(0.96 0.02 256);
+  --secondary-foreground: oklch(0.25 0.06 256);
+  --muted: oklch(0.96 0.015 250);
+  --muted-foreground: oklch(0.5 0.03 256);
+  /* Meta gradient accent (magenta/pink) */
+  --accent: oklch(0.68 0.22 5);
+  --accent-foreground: oklch(0.99 0 0);
 
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.02 260);
+  --card-foreground: oklch(0.2 0.04 260);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.02 260);
+  --popover-foreground: oklch(0.2 0.04 260);
 
   --destructive: oklch(0.6 0.22 27);
-  --border: oklch(0.92 0.005 260);
-  --input: oklch(0.92 0.005 260);
-  --ring: oklch(0.18 0.02 260);
+  --border: oklch(0.92 0.015 256);
+  --input: oklch(0.92 0.015 256);
+  --ring: oklch(0.6 0.2 256);
 
-  --gradient-hero: radial-gradient(1200px 600px at 80% -10%, oklch(0.96 0.04 145 / 0.4), transparent 60%),
-                   radial-gradient(900px 500px at -10% 10%, oklch(0.95 0.03 260 / 0.5), transparent 60%);
-  --shadow-card: 0 1px 2px oklch(0.18 0.02 260 / 0.04), 0 12px 40px -12px oklch(0.18 0.02 260 / 0.12);
-  --shadow-glow: 0 20px 60px -20px oklch(0.18 0.02 260 / 0.25);
+  --gradient-hero: radial-gradient(1200px 600px at 85% -10%, oklch(0.7 0.2 256 / 0.22), transparent 60%),
+                   radial-gradient(900px 500px at -10% 10%, oklch(0.72 0.22 5 / 0.18), transparent 60%);
+  --gradient-brand: linear-gradient(135deg, oklch(0.6 0.2 256), oklch(0.62 0.22 300), oklch(0.68 0.22 5));
+  --shadow-card: 0 1px 2px oklch(0.3 0.1 256 / 0.06), 0 12px 40px -12px oklch(0.5 0.18 256 / 0.18);
+  --shadow-glow: 0 20px 60px -20px oklch(0.6 0.2 256 / 0.35);
 }
 
 @layer base {
@@ -91,7 +95,7 @@
     -webkit-font-smoothing: antialiased;
     font-feature-settings: "ss01", "cv11";
   }
-  ::selection { background: oklch(0.18 0.02 260); color: white; }
+  ::selection { background: oklch(0.6 0.2 256); color: white; }
 }
 
 @utility container-x {
