@@ -744,13 +744,13 @@ function Landing() {
     <main className="min-h-screen bg-background text-ink">
       <Nav />
       <Hero />
-      <About />
       <Stats />
       <Services />
       <Process />
       <Cases />
       <WhyMe />
       <Skills />
+      <About />
       <Testimonials />
       <FAQ />
       <Contact />
