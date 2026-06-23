@@ -3,6 +3,7 @@ import { useState } from "react";
 import rahulAsset from "@/assets/rahul.png.asset.json";
 import englishBefore from "@/assets/english-before.png.asset.json";
 import englishAfter from "@/assets/english-after.png.asset.json";
+import rudrakshaPerf from "@/assets/rudraksha-performance.png.asset.json";
 const rahulPhoto = rahulAsset.url;
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -479,6 +480,70 @@ function Cases() {
             </div>
           </div>
         </article>
+
+        {/* Featured Case Study — Rudraksha WhatsApp */}
+        <article className="mb-12 overflow-hidden rounded-3xl border border-border bg-background shadow-[var(--shadow-card)]">
+          <div className="grid gap-0 lg:grid-cols-[1.1fr_1fr]">
+            <div className="p-8 sm:p-10 lg:p-12">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold uppercase tracking-widest text-brand">Featured Case Study</span>
+                <span className="text-xs uppercase tracking-widest text-ink-soft">Spiritual · D2C · Nepal</span>
+              </div>
+              <h3 className="mt-5 font-display text-3xl leading-tight tracking-tight text-ink sm:text-4xl">
+                271 WhatsApp Conversations at <em className="italic">$0.12</em> Each for a Rudraksha Brand
+              </h3>
+              <p className="mt-5 text-ink-soft">
+                A Nepal-based Original Rudraksha bead necklace brand wanted high-intent buyers, not
+                cold traffic. We ran a Meta Messages campaign optimised directly for WhatsApp —
+                broad Nepal targeting layered with spirituality, devotion, meditation and astrology
+                interests, paired with emotion-led creative ("Original Rudraksha for peace &amp;
+                protection") and a single CTA: <em>Send Message on WhatsApp for Price.</em>
+              </p>
+
+              <div className="mt-7 grid grid-cols-3 gap-4">
+                <div className="rounded-2xl border border-border p-4">
+                  <div className="font-display text-3xl text-ink">271</div>
+                  <div className="mt-1 text-xs uppercase tracking-widest text-ink-soft">Conversations</div>
+                </div>
+                <div className="rounded-2xl border border-border p-4">
+                  <div className="font-display text-3xl text-ink">$0.12</div>
+                  <div className="mt-1 text-xs uppercase tracking-widest text-ink-soft">Per Message</div>
+                </div>
+                <div className="rounded-2xl bg-ink p-4 text-background">
+                  <div className="font-display text-3xl">$31.24</div>
+                  <div className="mt-1 text-xs uppercase tracking-widest text-background/70">Total Spend</div>
+                </div>
+              </div>
+
+              <div className="mt-7 rounded-2xl bg-brand-soft p-5">
+                <div className="text-xs font-semibold uppercase tracking-widest text-brand">Why this result is strong</div>
+                <p className="mt-2 text-sm leading-relaxed text-ink">
+                  271 real WhatsApp chats for under $32 is roughly 11¢ per warm buyer conversation —
+                  a fraction of the $0.50–$1.50 most D2C spiritual brands pay for a website lead.
+                  Skipping the landing page and routing buyers straight into WhatsApp removed every
+                  drop-off point, so the algorithm could compound on actual purchase intent.
+                </p>
+              </div>
+
+              <ul className="mt-6 space-y-2 text-sm text-ink-soft">
+                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Broad Nepal targeting + spirituality, devotion, astrology interest stacking</li>
+                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Emotion-led creative with trust hooks (authenticity, peace, protection)</li>
+                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Click-to-WhatsApp funnel — zero landing-page friction</li>
+                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Killed losing ad sets fast, scaled winners on the Messages objective</li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-4 bg-surface p-6 sm:p-8 lg:p-10">
+              <figure className="overflow-hidden rounded-2xl border border-border bg-background">
+                <img src={rudrakshaPerf.url} alt="Meta Ads Performance overview: 271 messaging conversations started at $0.12 per conversation, $31.24 total ad spend" className="w-full" />
+                <figcaption className="border-t border-border px-4 py-3 text-xs uppercase tracking-widest text-ink-soft">
+                  Meta Ads dashboard · 271 chats · $0.12 each · $31.24 spend
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+
 
       </div>
     </section>
