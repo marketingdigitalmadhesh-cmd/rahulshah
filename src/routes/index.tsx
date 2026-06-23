@@ -480,34 +480,6 @@ function Cases() {
           </div>
         </article>
 
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {cases.map((c, i) => (
-            <article
-              key={c.headline}
-              className={`group flex flex-col justify-between rounded-3xl border border-border p-7 transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-card)] ${
-                i === 0 ? "bg-ink text-background lg:row-span-2 lg:p-10" : "bg-background"
-              }`}
-            >
-              <div>
-                <div className={`text-xs uppercase tracking-widest ${i === 0 ? "text-background/60" : "text-ink-soft"}`}>
-                  {c.industry}
-                </div>
-                <div className={`mt-6 font-display tracking-tight ${i === 0 ? "text-7xl" : "text-5xl text-ink"}`}>
-                  {c.metric}
-                </div>
-                <div className={`mt-1 text-sm ${i === 0 ? "text-background/60" : "text-ink-soft"}`}>
-                  {c.label}
-                </div>
-              </div>
-              <div className="mt-10 flex items-end justify-between gap-4">
-                <h3 className={`text-lg font-medium leading-snug ${i === 0 ? "text-background" : "text-ink"}`}>
-                  {c.headline}
-                </h3>
-                <ArrowUpRight className={`h-5 w-5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${i === 0 ? "text-background/80" : "text-ink-soft"}`} />
-              </div>
-            </article>
-          ))}
-        </div>
       </div>
     </section>
   );
