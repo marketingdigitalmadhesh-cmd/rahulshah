@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import rahulAsset from "@/assets/rahul.png.asset.json";
+import englishBefore from "@/assets/english-before.png.asset.json";
+import englishAfter from "@/assets/english-after.png.asset.json";
 const rahulPhoto = rahulAsset.url;
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -407,6 +409,76 @@ function Cases() {
             A snapshot of measurable outcomes from recent client campaigns across industries.
           </p>
         </div>
+
+        {/* Featured Case Study — English Institute */}
+        <article className="mb-12 overflow-hidden rounded-3xl border border-border bg-background shadow-[var(--shadow-card)]">
+          <div className="grid gap-0 lg:grid-cols-[1.1fr_1fr]">
+            <div className="p-8 sm:p-10 lg:p-12">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold uppercase tracking-widest text-brand">Featured Case Study</span>
+                <span className="text-xs uppercase tracking-widest text-ink-soft">Education · EdTech</span>
+              </div>
+              <h3 className="mt-5 font-display text-3xl leading-tight tracking-tight text-ink sm:text-4xl">
+                Cut Cost Per Message by <em className="italic">50%</em> for an Online English Learning Institute
+              </h3>
+              <p className="mt-5 text-ink-soft">
+                A Nepal-based English learning institute needed more student inquiries without
+                inflating ad spend. Through a Click-to-Message campaign on Facebook & Instagram —
+                targeting Spoken English, IELTS, Career Growth and Study Abroad audiences — we
+                tested hooks around the “Learn English in 70 Days” promise, reallocated budget
+                daily toward winning creatives and killed under-performers fast.
+              </p>
+
+              <div className="mt-7 grid grid-cols-3 gap-4">
+                <div className="rounded-2xl border border-border p-4">
+                  <div className="font-display text-3xl text-ink">152 → 304</div>
+                  <div className="mt-1 text-xs uppercase tracking-widest text-ink-soft">Conversations</div>
+                </div>
+                <div className="rounded-2xl border border-border p-4">
+                  <div className="font-display text-3xl text-ink">$0.10 → $0.05</div>
+                  <div className="mt-1 text-xs uppercase tracking-widest text-ink-soft">Per Message</div>
+                </div>
+                <div className="rounded-2xl bg-ink p-4 text-background">
+                  <div className="font-display text-3xl">−50%</div>
+                  <div className="mt-1 text-xs uppercase tracking-widest text-background/70">Cost Drop</div>
+                </div>
+              </div>
+
+              <div className="mt-7 rounded-2xl bg-brand-soft p-5">
+                <div className="text-xs font-semibold uppercase tracking-widest text-brand">Why this result is strong</div>
+                <p className="mt-2 text-sm leading-relaxed text-ink">
+                  Doubling conversation volume on a near-identical budget (≈$14.7) means every
+                  rupee worked twice as hard. A $0.05 cost per messaging conversation is well
+                  under the typical $0.15–$0.40 benchmark for education in South Asia — and
+                  because these are direct DMs (not form fills), the leads land warm, qualify
+                  faster, and convert into enrollments at a significantly higher rate.
+                </p>
+              </div>
+
+              <ul className="mt-6 space-y-2 text-sm text-ink-soft">
+                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Audience layering: Spoken English, IELTS, Study Abroad, Career Growth</li>
+                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Creative testing around the 70-day learning promise</li>
+                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Daily CPM monitoring & rapid budget reallocation</li>
+                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Click-to-Message funnel → Messenger qualification → Enrollment</li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-4 bg-surface p-6 sm:p-8 lg:p-10">
+              <figure className="overflow-hidden rounded-2xl border border-border bg-background">
+                <img src={englishBefore.url} alt="Meta Ads dashboard before optimization showing 152 messaging conversations at $0.10 each" className="w-full" />
+                <figcaption className="border-t border-border px-4 py-3 text-xs uppercase tracking-widest text-ink-soft">
+                  Before · 152 conversations · $0.10 each
+                </figcaption>
+              </figure>
+              <figure className="overflow-hidden rounded-2xl border border-border bg-background">
+                <img src={englishAfter.url} alt="Meta Ads dashboard after optimization showing 304 messaging conversations at $0.05 each" className="w-full" />
+                <figcaption className="border-t border-border px-4 py-3 text-xs uppercase tracking-widest text-ink-soft">
+                  After · 304 conversations · $0.05 each
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {cases.map((c, i) => (
