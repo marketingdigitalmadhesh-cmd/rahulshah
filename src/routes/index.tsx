@@ -1,9 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import rahulAsset from "@/assets/rahul.png.asset.json";
-import englishBefore from "@/assets/english-before.png.asset.json";
-import englishAfter from "@/assets/english-after.png.asset.json";
-import rudrakshaPerf from "@/assets/rudraksha-performance.png.asset.json";
 const rahulPhoto = rahulAsset.url;
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
