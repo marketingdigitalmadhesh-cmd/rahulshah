@@ -144,7 +144,7 @@ function BrandMark({ className = "" }: { className?: string }) {
       style={{ background: "var(--gradient-brand)" }}
       aria-hidden="true"
     >
-      <TrendingUp className="h-4.5 w-4.5" strokeWidth={2.6} />
+      <TrendingUp className="h-5 w-5" strokeWidth={2.6} />
       <span className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/25 to-transparent" />
     </span>
   );
