@@ -666,7 +666,7 @@ function Footer() {
       <div className="container-x grid gap-10 py-16 lg:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-2 font-semibold tracking-tight">
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-ink text-background text-sm font-bold">R</span>
+            <BrandMark />
             <span>Rahul K Shah</span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-ink-soft">
