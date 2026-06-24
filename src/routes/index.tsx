@@ -136,26 +136,43 @@ const faqs = [
   { q: "How do you measure campaign success?", a: "Through performance metrics such as ROI, ROAS, Cost Per Lead, Conversion Rate, and Revenue Growth." },
 ];
 
+function BrandMark({ className = "" }: { className?: string }) {
+  return (
+    <span
+      className={`relative grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-xl text-background shadow-[var(--shadow-glow)] ${className}`}
+      style={{ background: "var(--gradient-brand)" }}
+      aria-hidden="true"
+    >
+      <TrendingUp className="h-4.5 w-4.5" strokeWidth={2.6} />
+      <span className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/25 to-transparent" />
+    </span>
+  );
+}
+
 function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
-      <div className="container-x flex h-16 items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 font-semibold tracking-tight">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-ink text-background text-sm font-bold">R</span>
-          <span>Rahul K Shah</span>
+      <div className="container-x flex h-16 items-center justify-between gap-4">
+        <a href="#top" className="flex min-w-0 items-center gap-2.5 font-semibold tracking-tight">
+          <BrandMark />
+          <span className="flex min-w-0 flex-col leading-none">
+            <span className="truncate text-[15px] text-ink">Rahul K Shah</span>
+            <span className="mt-1 hidden text-[10px] font-medium uppercase tracking-[0.18em] text-ink-soft sm:inline">
+              Performance Marketer
+            </span>
+          </span>
         </a>
         <nav className="hidden items-center gap-8 text-sm text-ink-soft md:flex">
           <a href="#about" className="hover:text-ink transition-colors">About</a>
           <a href="#services" className="hover:text-ink transition-colors">Services</a>
           <a href="#process" className="hover:text-ink transition-colors">Process</a>
-          
           <a href="#faq" className="hover:text-ink transition-colors">FAQ</a>
         </nav>
         <a
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.02]"
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.02]"
         >
           Book a Call <ArrowRight className="h-3.5 w-3.5" />
         </a>
