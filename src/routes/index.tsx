@@ -688,15 +688,45 @@ function Footer() {
   );
 }
 
+function VideoIntro() {
+  return (
+    <section className="section bg-surface">
+      <div className="container-x grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-center lg:gap-16">
+        <div>
+          <span className="eyebrow ring-dot mb-5">Intro</span>
+          <h2 className="font-display text-3xl leading-tight tracking-tight text-ink sm:text-4xl lg:text-5xl">
+            Meet Me in <em className="italic text-ink-soft">60 Seconds</em>
+          </h2>
+          <p className="mt-5 text-ink-soft sm:text-lg">
+            A quick intro to how I think about Meta advertising, what I work on, and the
+            kind of growth I help businesses unlock.
+          </p>
+        </div>
+        <div className="relative w-full overflow-hidden rounded-2xl border border-border bg-ink shadow-[var(--shadow-card)] sm:rounded-3xl">
+          <div className="aspect-video w-full">
+            <video
+              src={introVideo}
+              controls
+              playsInline
+              preload="metadata"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Landing() {
   return (
     <main className="min-h-screen bg-background text-ink">
       <Nav />
       <Hero />
       <Stats />
+      <VideoIntro />
       <Services />
       <Process />
-      
       <WhyMe />
       <Skills />
       <About />
