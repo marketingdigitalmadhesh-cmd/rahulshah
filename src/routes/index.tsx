@@ -1,7 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import rahulAsset from "@/assets/rahul.png.asset.json";
+import introAsset from "@/assets/rahul-intro.webm.asset.json";
+import avatarDiwas from "@/assets/avatar-diwas.jpg";
+import avatarBinit from "@/assets/avatar-binit.jpg";
+import avatarKamal from "@/assets/avatar-kamal.jpg";
 const rahulPhoto = rahulAsset.url;
+const introVideo = introAsset.url;
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -103,21 +108,24 @@ const skills = [
 const testimonials = [
   {
     quote:
-      "Rahul rebuilt our entire ad account from scratch. Within 60 days we saw a 3.4× ROAS and finally understood where every dollar was going. The reporting is unmatched.",
-    name: "Dipak Shah",
-    role: "Founder, D2C Brand",
+      "Rahul rebuilt our entire Meta ad strategy and the results were immediate. Our cost per order dropped and we finally started scaling profitably online.",
+    name: "Diwas",
+    role: "Founder, Shoe Hub Nepal",
+    photo: avatarDiwas,
   },
   {
     quote:
-      "Communication is fast, strategy is clear, and the results speak for themselves. He treats our budget like it's his own — that's rare.",
-    name: "Ambika",
-    role: "CEO, EdTech Startup",
+      "Working with Rahul has been a game changer for Himalayan Feature. His targeting and creative testing brought us a flood of quality engagement at a fraction of the cost.",
+    name: "Binit Pokhrel",
+    role: "Founder, Himalayan Feature",
+    photo: avatarBinit,
   },
   {
     quote:
-      "We had tried two agencies before. Rahul delivered more leads in 3 weeks than they did in 6 months. The man knows Meta inside out.",
-    name: "Manisha",
-    role: "Marketing Head, Service Business",
+      "For eTutor, Rahul delivered more student inquiries in 3 weeks than we had managed in months. Clear communication, sharp strategy, and real performance.",
+    name: "Kamal Pokhrel",
+    role: "Founder, eTutor",
+    photo: avatarKamal,
   },
 ];
 
@@ -451,13 +459,16 @@ function Testimonials() {
               </blockquote>
               <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-4">
                 <img
-                  src={rahulPhoto}
+                  src={t.photo}
                   alt={t.name}
-                  className="h-10 w-10 rounded-full object-cover grayscale"
+                  loading="lazy"
+                  width={80}
+                  height={80}
+                  className="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-border"
                 />
-                <div>
-                  <div className="font-semibold text-ink">{t.name}</div>
-                  <div className="text-sm text-ink-soft">{t.role}</div>
+                <div className="min-w-0">
+                  <div className="truncate font-semibold text-ink">{t.name}</div>
+                  <div className="truncate text-sm text-ink-soft">{t.role}</div>
                 </div>
               </figcaption>
             </figure>
