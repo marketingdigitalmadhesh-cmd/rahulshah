@@ -37,6 +37,7 @@ import {
   Instagram,
   MapPin,
   Sparkles,
+  TrendingUp,
 } from "lucide-react";
 
 const WHATSAPP_URL = "https://wa.me/9779804885935?text=Hi%20Rahul%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.";
@@ -49,7 +50,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Rahul K Shah helps businesses scale through data-driven Meta advertising. 3+ years, 100+ campaigns, ROI-focused performance marketing. Based in Nepal, serving clients globally.",
+          "Rahul K Shah helps businesses scale through data-driven Meta advertising. 6+ years, 100+ campaigns, ROI-focused performance marketing. Based in Nepal, serving clients globally.",
       },
       { property: "og:title", content: "Rahul K Shah — Performance Marketer & Meta Ads Expert" },
       {
@@ -136,26 +137,43 @@ const faqs = [
   { q: "How do you measure campaign success?", a: "Through performance metrics such as ROI, ROAS, Cost Per Lead, Conversion Rate, and Revenue Growth." },
 ];
 
+function BrandMark({ className = "" }: { className?: string }) {
+  return (
+    <span
+      className={`relative grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-xl text-background shadow-[var(--shadow-glow)] ${className}`}
+      style={{ background: "var(--gradient-brand)" }}
+      aria-hidden="true"
+    >
+      <TrendingUp className="h-5 w-5" strokeWidth={2.6} />
+      <span className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/25 to-transparent" />
+    </span>
+  );
+}
+
 function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
-      <div className="container-x flex h-16 items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 font-semibold tracking-tight">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-ink text-background text-sm font-bold">R</span>
-          <span>Rahul K Shah</span>
+      <div className="container-x flex h-16 items-center justify-between gap-4">
+        <a href="#top" className="flex min-w-0 items-center gap-2.5 font-semibold tracking-tight">
+          <BrandMark />
+          <span className="flex min-w-0 flex-col leading-none">
+            <span className="truncate text-[15px] text-ink">Rahul K Shah</span>
+            <span className="mt-1 hidden text-[10px] font-medium uppercase tracking-[0.18em] text-ink-soft sm:inline">
+              Performance Marketer
+            </span>
+          </span>
         </a>
         <nav className="hidden items-center gap-8 text-sm text-ink-soft md:flex">
           <a href="#about" className="hover:text-ink transition-colors">About</a>
           <a href="#services" className="hover:text-ink transition-colors">Services</a>
           <a href="#process" className="hover:text-ink transition-colors">Process</a>
-          
           <a href="#faq" className="hover:text-ink transition-colors">FAQ</a>
         </nav>
         <a
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.02]"
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.02]"
         >
           Book a Call <ArrowRight className="h-3.5 w-3.5" />
         </a>
@@ -193,7 +211,7 @@ function Hero() {
 
           <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-ink-soft sm:grid-cols-2">
             {[
-              "3+ Years Experience",
+              "6+ Years Experience",
               "100+ Campaigns Managed",
               "National & International Clients",
               "ROI & ROAS Focused",
@@ -268,7 +286,7 @@ function About() {
             Meet Rahul <em className="italic text-ink-soft">K Shah</em>
           </h2>
           <p className="mt-6 text-ink-soft">
-            Performance Marketer & Meta Ads Specialist with 3+ years of hands-on experience
+            Performance Marketer & Meta Ads Specialist with 6+ years of hands-on experience
             helping businesses grow through data-driven advertising.
           </p>
           <div className="mt-8 rounded-2xl border border-border bg-surface p-6">
@@ -308,7 +326,7 @@ function About() {
 
 function Stats() {
   const stats = [
-    { v: "3+", l: "Years of Experience" },
+    { v: "6+", l: "Years of Experience" },
     { v: "100+", l: "Campaigns Managed" },
     { v: "12+", l: "Industries Served" },
     { v: "4.2×", l: "Avg. Client ROAS" },
@@ -648,7 +666,7 @@ function Footer() {
       <div className="container-x grid gap-10 py-16 lg:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-2 font-semibold tracking-tight">
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-ink text-background text-sm font-bold">R</span>
+            <BrandMark />
             <span>Rahul K Shah</span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-ink-soft">
