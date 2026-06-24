@@ -83,14 +83,6 @@ const process = [
   { n: "06", title: "Scaling Winning Campaigns", desc: "Scale profitably while protecting ROAS." },
 ];
 
-const cases = [
-  { industry: "Service Business", headline: "450+ Qualified Leads in 30 Days", metric: "450+", label: "Qualified Leads" },
-  { industry: "E-Commerce Brand", headline: "Increased Online Sales by 220% in 90 Days", metric: "+220%", label: "Sales Growth" },
-  { industry: "Education", headline: "Generated 1,000+ Student Inquiries", metric: "1,000+", label: "Inquiries" },
-  { industry: "Local Business", headline: "Achieved 4X Return on Ad Spend", metric: "4×", label: "ROAS" },
-  { industry: "D2C Brand", headline: "Reduced Cost Per Lead by 42%", metric: "-42%", label: "Cost Per Lead" },
-  { industry: "Personal Brand", headline: "Scaled to 6-Figure Monthly Revenue", metric: "6-Figure", label: "Monthly Revenue" },
-];
 
 const whyChoose = [
   "Data-Driven Decision Making",
@@ -151,7 +143,7 @@ function Nav() {
           <a href="#about" className="hover:text-ink transition-colors">About</a>
           <a href="#services" className="hover:text-ink transition-colors">Services</a>
           <a href="#process" className="hover:text-ink transition-colors">Process</a>
-          <a href="#cases" className="hover:text-ink transition-colors">Case Studies</a>
+          
           <a href="#faq" className="hover:text-ink transition-colors">FAQ</a>
         </nav>
         <a
@@ -191,12 +183,6 @@ function Hero() {
             >
               Book a Free Consultation
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </a>
-            <a
-              href="#cases"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3.5 text-sm font-medium text-ink hover:bg-surface"
-            >
-              View Case Studies
             </a>
           </div>
 
@@ -395,160 +381,6 @@ function Process() {
   );
 }
 
-function Cases() {
-  return (
-    <section id="cases" className="section bg-surface">
-      <div className="container-x">
-        <div className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <div className="max-w-2xl">
-            <span className="eyebrow ring-dot mb-5">Case Studies</span>
-            <h2 className="font-display text-4xl leading-tight tracking-tight text-ink sm:text-5xl">
-              Results That <em className="italic text-ink-soft">Speak</em>
-            </h2>
-          </div>
-          <p className="max-w-md text-ink-soft">
-            A snapshot of measurable outcomes from recent client campaigns across industries.
-          </p>
-        </div>
-
-        {/* Featured Case Study — English Institute */}
-        <article className="mb-12 overflow-hidden rounded-3xl border border-border bg-background shadow-[var(--shadow-card)]">
-          <div className="grid gap-0 lg:grid-cols-[1.1fr_1fr]">
-            <div className="p-8 sm:p-10 lg:p-12">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold uppercase tracking-widest text-brand">Featured Case Study</span>
-                <span className="text-xs uppercase tracking-widest text-ink-soft">Education · EdTech</span>
-              </div>
-              <h3 className="mt-5 font-display text-3xl leading-tight tracking-tight text-ink sm:text-4xl">
-                Cut Cost Per Message by <em className="italic">50%</em> for an Online English Learning Institute
-              </h3>
-              <p className="mt-5 text-ink-soft">
-                A Nepal-based English learning institute needed more student inquiries without
-                inflating ad spend. Through a Click-to-Message campaign on Facebook & Instagram —
-                targeting Spoken English, IELTS, Career Growth and Study Abroad audiences — we
-                tested hooks around the “Learn English in 70 Days” promise, reallocated budget
-                daily toward winning creatives and killed under-performers fast.
-              </p>
-
-              <div className="mt-7 grid grid-cols-3 gap-4">
-                <div className="rounded-2xl border border-border p-4">
-                  <div className="font-display text-3xl text-ink">152 → 304</div>
-                  <div className="mt-1 text-xs uppercase tracking-widest text-ink-soft">Conversations</div>
-                </div>
-                <div className="rounded-2xl border border-border p-4">
-                  <div className="font-display text-3xl text-ink">$0.10 → $0.05</div>
-                  <div className="mt-1 text-xs uppercase tracking-widest text-ink-soft">Per Message</div>
-                </div>
-                <div className="rounded-2xl bg-ink p-4 text-background">
-                  <div className="font-display text-3xl">−50%</div>
-                  <div className="mt-1 text-xs uppercase tracking-widest text-background/70">Cost Drop</div>
-                </div>
-              </div>
-
-              <div className="mt-7 rounded-2xl bg-brand-soft p-5">
-                <div className="text-xs font-semibold uppercase tracking-widest text-brand">Why this result is strong</div>
-                <p className="mt-2 text-sm leading-relaxed text-ink">
-                  Doubling conversation volume on a near-identical budget (≈$14.7) means every
-                  rupee worked twice as hard. A $0.05 cost per messaging conversation is well
-                  under the typical $0.15–$0.40 benchmark for education in South Asia — and
-                  because these are direct DMs (not form fills), the leads land warm, qualify
-                  faster, and convert into enrollments at a significantly higher rate.
-                </p>
-              </div>
-
-              <ul className="mt-6 space-y-2 text-sm text-ink-soft">
-                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Audience layering: Spoken English, IELTS, Study Abroad, Career Growth</li>
-                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Creative testing around the 70-day learning promise</li>
-                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Daily CPM monitoring & rapid budget reallocation</li>
-                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Click-to-Message funnel → Messenger qualification → Enrollment</li>
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-4 bg-surface p-6 sm:p-8 lg:p-10">
-              <figure className="overflow-hidden rounded-2xl border border-border bg-background">
-                <img src={englishBefore.url} alt="Meta Ads dashboard before optimization showing 152 messaging conversations at $0.10 each" className="w-full" />
-                <figcaption className="border-t border-border px-4 py-3 text-xs uppercase tracking-widest text-ink-soft">
-                  Before · 152 conversations · $0.10 each
-                </figcaption>
-              </figure>
-              <figure className="overflow-hidden rounded-2xl border border-border bg-background">
-                <img src={englishAfter.url} alt="Meta Ads dashboard after optimization showing 304 messaging conversations at $0.05 each" className="w-full" />
-                <figcaption className="border-t border-border px-4 py-3 text-xs uppercase tracking-widest text-ink-soft">
-                  After · 304 conversations · $0.05 each
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </article>
-
-        {/* Featured Case Study — Rudraksha WhatsApp */}
-        <article className="mb-12 overflow-hidden rounded-3xl border border-border bg-background shadow-[var(--shadow-card)]">
-          <div className="grid gap-0 lg:grid-cols-[1.1fr_1fr]">
-            <div className="p-8 sm:p-10 lg:p-12">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold uppercase tracking-widest text-brand">Featured Case Study</span>
-                <span className="text-xs uppercase tracking-widest text-ink-soft">Spiritual · D2C · Nepal</span>
-              </div>
-              <h3 className="mt-5 font-display text-3xl leading-tight tracking-tight text-ink sm:text-4xl">
-                271 WhatsApp Conversations at <em className="italic">$0.12</em> Each for a Rudraksha Brand
-              </h3>
-              <p className="mt-5 text-ink-soft">
-                A Nepal-based Original Rudraksha bead necklace brand wanted high-intent buyers, not
-                cold traffic. We ran a Meta Messages campaign optimised directly for WhatsApp —
-                broad Nepal targeting layered with spirituality, devotion, meditation and astrology
-                interests, paired with emotion-led creative ("Original Rudraksha for peace &amp;
-                protection") and a single CTA: <em>Send Message on WhatsApp for Price.</em>
-              </p>
-
-              <div className="mt-7 grid grid-cols-3 gap-4">
-                <div className="rounded-2xl border border-border p-4">
-                  <div className="font-display text-3xl text-ink">271</div>
-                  <div className="mt-1 text-xs uppercase tracking-widest text-ink-soft">Conversations</div>
-                </div>
-                <div className="rounded-2xl border border-border p-4">
-                  <div className="font-display text-3xl text-ink">$0.12</div>
-                  <div className="mt-1 text-xs uppercase tracking-widest text-ink-soft">Per Message</div>
-                </div>
-                <div className="rounded-2xl bg-ink p-4 text-background">
-                  <div className="font-display text-3xl">$31.24</div>
-                  <div className="mt-1 text-xs uppercase tracking-widest text-background/70">Total Spend</div>
-                </div>
-              </div>
-
-              <div className="mt-7 rounded-2xl bg-brand-soft p-5">
-                <div className="text-xs font-semibold uppercase tracking-widest text-brand">Why this result is strong</div>
-                <p className="mt-2 text-sm leading-relaxed text-ink">
-                  271 real WhatsApp chats for under $32 is roughly 11¢ per warm buyer conversation —
-                  a fraction of the $0.50–$1.50 most D2C spiritual brands pay for a website lead.
-                  Skipping the landing page and routing buyers straight into WhatsApp removed every
-                  drop-off point, so the algorithm could compound on actual purchase intent.
-                </p>
-              </div>
-
-              <ul className="mt-6 space-y-2 text-sm text-ink-soft">
-                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Broad Nepal targeting + spirituality, devotion, astrology interest stacking</li>
-                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Emotion-led creative with trust hooks (authenticity, peace, protection)</li>
-                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Click-to-WhatsApp funnel — zero landing-page friction</li>
-                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> Killed losing ad sets fast, scaled winners on the Messages objective</li>
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-4 bg-surface p-6 sm:p-8 lg:p-10">
-              <figure className="overflow-hidden rounded-2xl border border-border bg-background">
-                <img src={rudrakshaPerf.url} alt="Meta Ads Performance overview: 271 messaging conversations started at $0.12 per conversation, $31.24 total ad spend" className="w-full" />
-                <figcaption className="border-t border-border px-4 py-3 text-xs uppercase tracking-widest text-ink-soft">
-                  Meta Ads dashboard · 271 chats · $0.12 each · $31.24 spend
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </article>
-
-
-      </div>
-    </section>
-  );
-}
 
 function WhyMe() {
   return (
@@ -824,7 +656,7 @@ function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-ink-soft">
             <li><a href="#about" className="hover:text-ink">About</a></li>
             <li><a href="#services" className="hover:text-ink">Services</a></li>
-            <li><a href="#cases" className="hover:text-ink">Case Studies</a></li>
+            
             <li><a href="#faq" className="hover:text-ink">FAQ</a></li>
           </ul>
         </div>
@@ -856,7 +688,7 @@ function Landing() {
       <Stats />
       <Services />
       <Process />
-      <Cases />
+      
       <WhyMe />
       <Skills />
       <About />
