@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Rahul K Shah helps businesses scale through data-driven Meta advertising. 3+ years, 100+ campaigns, ROI-focused performance marketing. Based in Nepal, serving clients globally.",
+          "Rahul K Shah helps businesses scale through data-driven Meta advertising. 6+ years, 100+ campaigns, ROI-focused performance marketing. Based in Nepal, serving clients globally.",
       },
       { property: "og:title", content: "Rahul K Shah — Performance Marketer & Meta Ads Expert" },
       {
@@ -193,7 +193,7 @@ function Hero() {
 
           <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-ink-soft sm:grid-cols-2">
             {[
-              "3+ Years Experience",
+              "6+ Years Experience",
               "100+ Campaigns Managed",
               "National & International Clients",
               "ROI & ROAS Focused",
@@ -268,7 +268,7 @@ function About() {
             Meet Rahul <em className="italic text-ink-soft">K Shah</em>
           </h2>
           <p className="mt-6 text-ink-soft">
-            Performance Marketer & Meta Ads Specialist with 3+ years of hands-on experience
+            Performance Marketer & Meta Ads Specialist with 6+ years of hands-on experience
             helping businesses grow through data-driven advertising.
           </p>
           <div className="mt-8 rounded-2xl border border-border bg-surface p-6">
@@ -308,7 +308,7 @@ function About() {
 
 function Stats() {
   const stats = [
-    { v: "3+", l: "Years of Experience" },
+    { v: "6+", l: "Years of Experience" },
     { v: "100+", l: "Campaigns Managed" },
     { v: "12+", l: "Industries Served" },
     { v: "4.2×", l: "Avg. Client ROAS" },
