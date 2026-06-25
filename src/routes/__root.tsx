@@ -7,10 +7,9 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -37,9 +36,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -77,15 +73,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
+      { title: "Rahul Shah - Meta Ads Expert" },
       { name: "description", content: "A personal brand portfolio website for a Meta Ads Expert, generating leads and bookings." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
+      { name: "author", content: "Rahul Shah" },
+      { property: "og:title", content: "Rahul Shah - Meta Ads Expert" },
       { property: "og:description", content: "A personal brand portfolio website for a Meta Ads Expert, generating leads and bookings." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
+      { name: "twitter:site", content: "@rahul_shah" },
+      { name: "twitter:title", content: "Rahul Shah - Meta Ads Expert" },
       { name: "twitter:description", content: "A personal brand portfolio website for a Meta Ads Expert, generating leads and bookings." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/75f859c1-b426-444a-bdd9-6783e84b5ba2/id-preview-54dab0a6--dfb0b1b0-0ea6-4057-8b78-43a98f927a95.lovable.app-1781629930770.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/75f859c1-b426-444a-bdd9-6783e84b5ba2/id-preview-54dab0a6--dfb0b1b0-0ea6-4057-8b78-43a98f927a95.lovable.app-1781629930770.png" },

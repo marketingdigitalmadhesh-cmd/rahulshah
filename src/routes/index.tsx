@@ -1,12 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import rahulAsset from "@/assets/rahul.png.asset.json";
-import introAsset from "@/assets/rahul-intro.webm.asset.json";
+import rahulPhoto from "@/assets/rahul.png";
+import introVideo from "@/assets/rahul-intro.webm";
 import avatarDiwas from "@/assets/avatar-diwas.jpg";
 import avatarBinit from "@/assets/avatar-binit.jpg";
 import avatarKamal from "@/assets/avatar-kamal.jpg";
-const rahulPhoto = rahulAsset.url;
-const introVideo = introAsset.url;
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
