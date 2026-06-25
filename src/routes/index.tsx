@@ -39,7 +39,7 @@ import {
 } from "lucide-react";
 
 const WHATSAPP_URL = "https://wa.me/9779804885935?text=Hi%20Rahul%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.";
-const EMAIL = "official.rahulshah@gmail.com";
+const EMAIL = "iamrahulshah.np@gmail.com";
 
 export const Route = createFileRoute("/")({
   head: () => ({
